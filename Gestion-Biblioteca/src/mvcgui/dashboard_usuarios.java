@@ -65,6 +65,7 @@ public class dashboard_usuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -123,10 +124,58 @@ public class dashboard_usuarios extends javax.swing.JFrame {
             },
             new String [] {
                 "CEDULA", "NOMBRE", "APELLIDO", "GENERO", "DIRECCION", "CELULAR", "ESTADO", "USUARIO"
+=======
+        txtNombre = new javax.swing.JTextField();
+        txtUsuario = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
+        cbxRol = new javax.swing.JComboBox<>();
+        cbxEstado = new javax.swing.JComboBox<>();
+        btnNuevo = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        bntEliminar = new javax.swing.JButton();
+        bntBuscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblUsuarios = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        txtNombre.setText("Nombre:");
+        txtNombre.addActionListener(this::txtNombreActionPerformed);
+
+        txtUsuario.setText("Usuario:");
+
+        cbxRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Bibliotecario", "Usuario" }));
+
+        cbxEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
+
+        btnNuevo.setText("Nuevo");
+        btnNuevo.addActionListener(this::btnNuevoActionPerformed);
+
+        btnGuardar.setText("Guardar");
+
+        btnActualizar.setText("Actualizar");
+
+        bntEliminar.setText("Eliminar");
+
+        bntBuscar.setText("Buscar");
+
+        tblUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
             }
         ));
         jScrollPane1.setViewportView(tblUsuarios);
 
+<<<<<<< HEAD
         btnLimpiarUsu.setText("LIMPIAR");
         btnLimpiarUsu.addActionListener(this::btnLimpiarUsuActionPerformed);
 
@@ -143,12 +192,16 @@ public class dashboard_usuarios extends javax.swing.JFrame {
         cbxEstadoUsu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
 
         jLabel9.setText("CORREO:");
+=======
+        jLabel1.setText("GESTIÓN DE USUARIOS");
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(193, 193, 193)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -198,10 +251,39 @@ public class dashboard_usuarios extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52))))
+=======
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNuevo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnGuardar)
+                                .addGap(46, 46, 46)
+                                .addComponent(btnActualizar)
+                                .addGap(49, 49, 49)
+                                .addComponent(bntEliminar)
+                                .addGap(43, 43, 43)
+                                .addComponent(bntBuscar))
+                            .addComponent(cbxEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(465, Short.MAX_VALUE))
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
@@ -252,11 +334,37 @@ public class dashboard_usuarios extends javax.swing.JFrame {
                     .addComponent(btnEliminarUsu)
                     .addComponent(btnLimpiarUsu))
                 .addGap(39, 39, 39))
+=======
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbxEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNuevo)
+                    .addComponent(btnGuardar)
+                    .addComponent(btnActualizar)
+                    .addComponent(bntEliminar)
+                    .addComponent(bntBuscar))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btnInsertarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarUsuActionPerformed
         // TODO add your handling code here:
         controlador.insertar();
@@ -305,6 +413,16 @@ public class dashboard_usuarios extends javax.swing.JFrame {
         cbxEstadoUsu.setSelectedIndex(0);
     }
     
+=======
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNuevoActionPerformed
+
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
     /**
      * @param args the command line arguments
      */
@@ -331,6 +449,7 @@ public class dashboard_usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton btnActualizarUsu;
     private javax.swing.JButton btnEliminarUsu;
     private javax.swing.JButton btnInsertarUsu;
@@ -355,5 +474,20 @@ public class dashboard_usuarios extends javax.swing.JFrame {
     public javax.swing.JTextField txtCorreoUsu;
     public javax.swing.JTextField txtDireccionUsu;
     public javax.swing.JTextField txtNombreUsu;
+=======
+    public javax.swing.JButton bntBuscar;
+    public javax.swing.JButton bntEliminar;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnGuardar;
+    public javax.swing.JButton btnNuevo;
+    public javax.swing.JComboBox<String> cbxEstado;
+    public javax.swing.JComboBox<String> cbxRol;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblUsuarios;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JPasswordField txtPassword;
+    public javax.swing.JTextField txtUsuario;
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
     // End of variables declaration//GEN-END:variables
 }
