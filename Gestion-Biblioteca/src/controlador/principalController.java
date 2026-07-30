@@ -60,11 +60,25 @@ public class principalController {
     }
 
     private void cerrarSesion() {
+
+    int opcion = javax.swing.JOptionPane.showConfirmDialog(
+            vista,
+            "¿Está seguro de que desea cerrar la sesión?",
+            "Cerrar Sesión",
+            javax.swing.JOptionPane.YES_NO_OPTION,
+            javax.swing.JOptionPane.QUESTION_MESSAGE);
+
+    if (opcion == javax.swing.JOptionPane.YES_OPTION) {
+
         login l = new login();
         l.setLocationRelativeTo(null);
         l.setVisible(true);
+
         vista.dispose();
+
     }
+
+}
 
     private void iniciarReloj() {
 

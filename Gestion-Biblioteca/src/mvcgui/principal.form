@@ -26,26 +26,30 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblRol" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblFecha" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblHora" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnLibros" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAutores" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCategorias" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnUsuarios" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnPrestamos" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                       <Component id="btnCerrarSesion" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblRol" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblHora" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnLibros" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAutores" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnCategorias" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnUsuarios" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnPrestamos" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="125" max="32767" attributes="0"/>
@@ -89,7 +93,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="SISTEMA DE BIBLIOTECA"/>
+        <Property name="text" type="java.lang.String" value="Sistema de Gesti&#xf3;n de Biblioteca"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnUsuarios">

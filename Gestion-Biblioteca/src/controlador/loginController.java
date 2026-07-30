@@ -13,13 +13,16 @@ public class loginController {
 
     public loginController(login vista) {
 
-        this.vista = vista;
-        this.dao = new usuariosDAO();
+    this.vista = vista;
+    this.dao = new usuariosDAO();
 
-        this.vista.btnIngresar.addActionListener(e -> ingresar());
-        this.vista.btnSalir.addActionListener(e -> System.exit(0));
+    this.vista.btnIngresar.addActionListener(e -> ingresar());
+    this.vista.btnSalir.addActionListener(e -> System.exit(0));
 
-    }
+    // Iniciar sesión al presionar Enter en la contraseña
+    this.vista.txtPassword.addActionListener(e -> ingresar());
+
+}
 
     private void ingresar() {
 

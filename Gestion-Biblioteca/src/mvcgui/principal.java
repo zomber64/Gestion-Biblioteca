@@ -44,7 +44,7 @@ public class principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("SISTEMA DE BIBLIOTECA");
+        jLabel1.setText("Sistema de Gestión de Biblioteca");
 
         btnUsuarios.setText("Gestión de Usuarios");
         btnUsuarios.addActionListener(this::btnUsuariosActionPerformed);
@@ -76,23 +76,25 @@ public class principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUsuario)
-                            .addComponent(lblRol)
-                            .addComponent(lblFecha)
-                            .addComponent(lblHora))
-                        .addGap(81, 81, 81)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLibros)
-                            .addComponent(btnAutores)
-                            .addComponent(btnCategorias)
-                            .addComponent(btnUsuarios)
-                            .addComponent(jLabel1)
-                            .addComponent(btnPrestamos)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(142, 142, 142)
-                        .addComponent(btnCerrarSesion)))
+                        .addComponent(btnCerrarSesion))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblUsuario)
+                                    .addComponent(lblRol)
+                                    .addComponent(lblFecha)
+                                    .addComponent(lblHora))
+                                .addGap(81, 81, 81)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnLibros)
+                                    .addComponent(btnAutores)
+                                    .addComponent(btnCategorias)
+                                    .addComponent(btnUsuarios)
+                                    .addComponent(btnPrestamos))))))
                 .addContainerGap(125, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
