@@ -364,7 +364,7 @@ public class dashboard_usuarios extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void btnInsertarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarUsuActionPerformed
         // TODO add your handling code here:
         controlador.insertar();
