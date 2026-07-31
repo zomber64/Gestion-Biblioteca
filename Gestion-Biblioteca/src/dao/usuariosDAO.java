@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import modelo.usuarios;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.conexion;
 
 public class usuariosDAO {
     conexion cn = new conexion();

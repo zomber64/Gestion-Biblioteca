@@ -1,4 +1,8 @@
-package dao;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,24 +14,22 @@ public class conexion {
     private static final String USER = "root";
     private static final String PASSWORD = "";
 
-    public static Connection getConnection() {
+    private Connection con;
 
-        Connection cn = null;
+    public Connection getConnection() {
 
         try {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
-
-            cn = DriverManager.getConnection(URL, USER, PASSWORD);
-
-            System.out.println("Conexión exitosa a la base de datos.");
+            con = DriverManager.getConnection(URL, USER, PASSWORD);
 
         } catch (ClassNotFoundException | SQLException e) {
 
-            System.out.println("Error de conexión: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
 
         }
 
-        return cn;
+        return con;
     }
+
 }

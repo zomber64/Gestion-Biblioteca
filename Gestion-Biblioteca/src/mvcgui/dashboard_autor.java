@@ -4,6 +4,8 @@
  */
 package mvcgui;
 
+import controlador.autoresController;
+
 /**
  *
  * @author Adriana
@@ -28,21 +30,188 @@ public class dashboard_autor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtNacionalidadAut = new javax.swing.JTextField();
+        txtNombreAut = new javax.swing.JTextField();
+        cbxEstadoAut = new javax.swing.JComboBox<>();
+        btnADDInsertarAut = new javax.swing.JButton();
+        btnActualizarAut = new javax.swing.JButton();
+        btnEliminarAut = new javax.swing.JButton();
+        btnLimpiarAut = new javax.swing.JButton();
+        btnRegresarAut = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblAutor = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("GESTION DE AUTORES");
+
+        jLabel2.setText("NOMBRE:");
+
+        jLabel3.setText("NACIONALIDAD:");
+
+        jLabel4.setText("ESTADO:");
+
+        txtNombreAut.addActionListener(this::txtNombreAutActionPerformed);
+
+        cbxEstadoAut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ACTIVO", "INACTIVO" }));
+        cbxEstadoAut.addActionListener(this::cbxEstadoAutActionPerformed);
+
+        btnADDInsertarAut.setText("INSERTAR");
+        btnADDInsertarAut.addActionListener(this::btnADDInsertarAutActionPerformed);
+
+        btnActualizarAut.setText("ACTUALIZAR");
+        btnActualizarAut.addActionListener(this::btnActualizarAutActionPerformed);
+
+        btnEliminarAut.setText("ELIMINAR");
+        btnEliminarAut.addActionListener(this::btnEliminarAutActionPerformed);
+
+        btnLimpiarAut.setText("LIMPIAR");
+        btnLimpiarAut.addActionListener(this::btnLimpiarAutActionPerformed);
+
+        btnRegresarAut.setText("REGRESAR");
+        btnRegresarAut.addActionListener(this::btnRegresarAutActionPerformed);
+
+        tblAutor.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "NOMBRE", "NACIONALIDAD", "ESTADO"
+            }
+        ));
+        tblAutor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblAutorMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblAutor);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(320, 320, 320)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 718, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addGap(61, 61, 61)
+                                        .addComponent(cbxEstadoAut, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(56, 56, 56)
+                                        .addComponent(txtNombreAut, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtNacionalidadAut, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(275, 275, 275)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnActualizarAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnADDInsertarAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnEliminarAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnLimpiarAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRegresarAut, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))))
+                .addGap(0, 229, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNombreAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnADDInsertarAut)
+                    .addComponent(btnLimpiarAut))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtNacionalidadAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnActualizarAut)
+                    .addComponent(btnRegresarAut))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(cbxEstadoAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEliminarAut))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnADDInsertarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnADDInsertarAutActionPerformed
+        // TODO add your handling code here:
+        autoresController controlador = new autoresController(this);
+        controlador.insertar();
+        controlador.listar();
+        controlador.limpiar();
+    }//GEN-LAST:event_btnADDInsertarAutActionPerformed
+
+    private void cbxEstadoAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxEstadoAutActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_cbxEstadoAutActionPerformed
+
+    private void txtNombreAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreAutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreAutActionPerformed
+
+    private void btnRegresarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarAutActionPerformed
+        // TODO add your handling code here:
+        principal p = new principal();
+        p.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRegresarAutActionPerformed
+
+    private void tblAutorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAutorMouseClicked
+        // TODO add your handling code here:                                   
+        int fila = tblAutor.getSelectedRow();
+        txtNombreAut.setText(tblAutor.getValueAt(fila,1).toString());
+        txtNacionalidadAut.setText(tblAutor.getValueAt(fila,2).toString());
+        cbxEstadoAut.setSelectedItem(tblAutor.getValueAt(fila,3).toString());
+    }//GEN-LAST:event_tblAutorMouseClicked
+
+    private void btnEliminarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarAutActionPerformed
+        // TODO add your handling code here:
+        autoresController controlador = new autoresController(this);
+        controlador.eliminar();
+        controlador.limpiar();
+    }//GEN-LAST:event_btnEliminarAutActionPerformed
+
+    private void btnActualizarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarAutActionPerformed
+        // TODO add your handling code here:
+        autoresController controlador = new autoresController(this);
+        controlador.editar();
+        controlador.limpiar();
+    }//GEN-LAST:event_btnActualizarAutActionPerformed
+
+    private void btnLimpiarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAutActionPerformed
+        // TODO add your handling code here:                                                  
+        autoresController controlador = new autoresController(this);
+        controlador.limpiar();
+    }//GEN-LAST:event_btnLimpiarAutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +239,19 @@ public class dashboard_autor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnADDInsertarAut;
+    private javax.swing.JButton btnActualizarAut;
+    private javax.swing.JButton btnEliminarAut;
+    private javax.swing.JButton btnLimpiarAut;
+    private javax.swing.JButton btnRegresarAut;
+    public javax.swing.JComboBox<String> cbxEstadoAut;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable tblAutor;
+    public javax.swing.JTextField txtNacionalidadAut;
+    public javax.swing.JTextField txtNombreAut;
     // End of variables declaration//GEN-END:variables
 }
