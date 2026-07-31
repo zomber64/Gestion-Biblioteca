@@ -4,12 +4,14 @@
  */
 package mvcgui;
 
+import controlador.usuariosController;
+
 /**
  *
  * @author Adriana
  */
 public class dashboard_usuarios extends javax.swing.JFrame {
-    
+    private usuariosController controlador;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(dashboard_usuarios.class.getName());
 
     /**
@@ -17,6 +19,41 @@ public class dashboard_usuarios extends javax.swing.JFrame {
      */
     public dashboard_usuarios() {
         initComponents();
+        this.controlador = new usuariosController(this);
+        // En dashboard_usuarios.java (o en la inicialización del controlador)
+        txtCedulaUsu.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                char c = e.getKeyChar();
+
+                // 1. Si no es un dígito del 0-9, se ignora la tecla
+                if (!Character.isDigit(c)) {
+                    e.consume(); 
+                }
+
+                // 2. Si ya hay 10 dígitos, no permite escribir más
+                if (txtCedulaUsu.getText().length() >= 10) {
+                    e.consume();
+                }
+            }
+        });
+        // En dashboard_usuarios.java (o en la inicialización del controlador)
+        txtCelularUsu.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                char c = e.getKeyChar();
+
+                // 1. Si no es un dígito del 0-9, se ignora la tecla
+                if (!Character.isDigit(c)) {
+                    e.consume(); 
+                }
+
+                // 2. Si ya hay 10 dígitos, no permite escribir más
+                if (txtCelularUsu.getText().length() >= 10) {
+                    e.consume();
+                }
+            }
+        });
     }
 
     /**
@@ -28,6 +65,66 @@ public class dashboard_usuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnRegresarUsu = new javax.swing.JButton();
+        btnInsertarUsu = new javax.swing.JButton();
+        btnActualizarUsu = new javax.swing.JButton();
+        btnEliminarUsu = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblUsuarios = new javax.swing.JTable();
+        btnLimpiarUsu = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        txtCedulaUsu = new javax.swing.JTextField();
+        txtNombreUsu = new javax.swing.JTextField();
+        txtDireccionUsu = new javax.swing.JTextField();
+        txtApellidoUsu = new javax.swing.JTextField();
+        cbxGeneroUsu = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtCelularUsu = new javax.swing.JTextField();
+        cbxEstadoUsu = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        txtCorreoUsu = new javax.swing.JTextField();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("GESTION DE USUARIOS");
+
+        jLabel2.setText("CEDULA:");
+
+        jLabel3.setText("NOMBRE:");
+
+        jLabel4.setText("APELLIDO:");
+
+        jLabel5.setText("GENERO:");
+
+        btnRegresarUsu.setText("REGRESAR");
+        btnRegresarUsu.addActionListener(this::btnRegresarUsuActionPerformed);
+
+        btnInsertarUsu.setText("INSERTAR");
+        btnInsertarUsu.addActionListener(this::btnInsertarUsuActionPerformed);
+
+        btnActualizarUsu.setText("ACTUALIZAR");
+        btnActualizarUsu.addActionListener(this::btnActualizarUsuActionPerformed);
+
+        btnEliminarUsu.setText("ELIMINAR");
+        btnEliminarUsu.addActionListener(this::btnEliminarUsuActionPerformed);
+
+        tblUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "CEDULA", "NOMBRE", "APELLIDO", "GENERO", "DIRECCION", "CELULAR", "ESTADO", "USUARIO"
+=======
         txtNombre = new javax.swing.JTextField();
         txtUsuario = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
@@ -73,17 +170,88 @@ public class dashboard_usuarios extends javax.swing.JFrame {
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
             }
         ));
         jScrollPane1.setViewportView(tblUsuarios);
 
+<<<<<<< HEAD
+        btnLimpiarUsu.setText("LIMPIAR");
+        btnLimpiarUsu.addActionListener(this::btnLimpiarUsuActionPerformed);
+
+        jLabel6.setText("ESTADO:");
+
+        txtCedulaUsu.addActionListener(this::txtCedulaUsuActionPerformed);
+
+        cbxGeneroUsu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+
+        jLabel7.setText("DIRECCION:");
+
+        jLabel8.setText("CELULAR:");
+
+        cbxEstadoUsu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
+
+        jLabel9.setText("CORREO:");
+=======
         jLabel1.setText("GESTIÓN DE USUARIOS");
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addGap(193, 193, 193)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel6))
+                                .addGap(64, 64, 64)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(cbxGeneroUsu, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtCedulaUsu, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtNombreUsu, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtApellidoUsu, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(txtDireccionUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(1, 1, 1)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnRegresarUsu)
+                                                .addGap(30, 30, 30)
+                                                .addComponent(btnInsertarUsu))
+                                            .addComponent(txtCelularUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnActualizarUsu)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnEliminarUsu)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnLimpiarUsu))
+                                    .addComponent(txtCorreoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbxEstadoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52))))
+=======
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -110,10 +278,63 @@ public class dashboard_usuarios extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(465, Short.MAX_VALUE))
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel1)
+                        .addGap(17, 17, 17)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txtCedulaUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtNombreUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(txtApellidoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(cbxGeneroUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(12, 12, 12))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(txtCorreoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtDireccionUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtCelularUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(cbxEstadoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegresarUsu)
+                    .addComponent(btnInsertarUsu)
+                    .addComponent(btnActualizarUsu)
+                    .addComponent(btnEliminarUsu)
+                    .addComponent(btnLimpiarUsu))
+                .addGap(39, 39, 39))
+=======
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -136,12 +357,63 @@ public class dashboard_usuarios extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+    private void btnInsertarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarUsuActionPerformed
+        // TODO add your handling code here:
+        controlador.insertar();
+        controlador.listar();
+        limpiar();
+    }//GEN-LAST:event_btnInsertarUsuActionPerformed
+
+    private void btnRegresarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarUsuActionPerformed
+        // TODO add your handling code here:
+        principal p = new principal();
+        p.setLocationRelativeTo(null);
+        p.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRegresarUsuActionPerformed
+
+    private void btnEliminarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarUsuActionPerformed
+        // TODO add your handling code here:
+        controlador.eliminar();
+        limpiar();
+    }//GEN-LAST:event_btnEliminarUsuActionPerformed
+
+    private void btnActualizarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarUsuActionPerformed
+        // TODO add your handling code here:
+        controlador.editar();
+        limpiar();
+    }//GEN-LAST:event_btnActualizarUsuActionPerformed
+
+    private void btnLimpiarUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarUsuActionPerformed
+        // TODO add your handling code here:
+        limpiar();
+    }//GEN-LAST:event_btnLimpiarUsuActionPerformed
+
+    private void txtCedulaUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaUsuActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtCedulaUsuActionPerformed
+    
+    public void limpiar(){
+        txtCedulaUsu.setText("");
+        txtNombreUsu.setText("");
+        txtApellidoUsu.setText("");
+        cbxGeneroUsu.setSelectedIndex(0);
+        txtCorreoUsu.setText("");
+        txtDireccionUsu.setText("");
+        txtCelularUsu.setText("");
+        cbxEstadoUsu.setSelectedIndex(0);
+    }
+    
+=======
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
@@ -150,6 +422,7 @@ public class dashboard_usuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNuevoActionPerformed
 
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
     /**
      * @param args the command line arguments
      */
@@ -176,6 +449,32 @@ public class dashboard_usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+    private javax.swing.JButton btnActualizarUsu;
+    private javax.swing.JButton btnEliminarUsu;
+    private javax.swing.JButton btnInsertarUsu;
+    private javax.swing.JButton btnLimpiarUsu;
+    private javax.swing.JButton btnRegresarUsu;
+    public javax.swing.JComboBox<String> cbxEstadoUsu;
+    public javax.swing.JComboBox<String> cbxGeneroUsu;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable tblUsuarios;
+    public javax.swing.JTextField txtApellidoUsu;
+    public javax.swing.JTextField txtCedulaUsu;
+    public javax.swing.JTextField txtCelularUsu;
+    public javax.swing.JTextField txtCorreoUsu;
+    public javax.swing.JTextField txtDireccionUsu;
+    public javax.swing.JTextField txtNombreUsu;
+=======
     public javax.swing.JButton bntBuscar;
     public javax.swing.JButton bntEliminar;
     public javax.swing.JButton btnActualizar;
@@ -189,5 +488,6 @@ public class dashboard_usuarios extends javax.swing.JFrame {
     public javax.swing.JTextField txtNombre;
     public javax.swing.JPasswordField txtPassword;
     public javax.swing.JTextField txtUsuario;
+>>>>>>> aac1ce0cd699bc2aa33a808b19bb8ced104272bd
     // End of variables declaration//GEN-END:variables
 }
